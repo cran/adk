@@ -106,7 +106,7 @@ function (...)
     for (j in 1:L) {
         fij <- NULL
         for (i in 1:k) {
-            fij <- c(fij, sum(samples[[i]] == Z.star[j]))
+            fij <- c(fij, as.double(sum(samples[[i]] == Z.star[j])))
         }
         l.vec <- c(l.vec, sum(fij))
     }

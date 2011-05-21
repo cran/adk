@@ -1,0 +1,12 @@
+760a6c974dde6eefe45fafcdead42dd8 *DESCRIPTION
+9fdfeb11f7ddba6f3aab9aaa6b1ac5dd *NAMESPACE
+37473d79c17fe58efc40ea4be6b7657a *NEWS
+738a18536ecc228156fd005f403f050c *R/adk.combined.test.R
+7adf271d78be0e9e3666fb41c6f5a85a *R/adk.pval.R
+33815a89753ce30d00d568718683ae61 *R/adk.test.R
+4478c4e6aaad1afe53e0682cc1f406c2 *R/print.adk.R
+a8697dfbfbee4629bb42f7f488c5a957 *man/adk-package.Rd
+479dbd14685e6719a12a07c7e9edb9c5 *man/adk.combined.test.Rd
+e09d831be7a1e70f32446edb5bad0181 *man/adk.pval.Rd
+ccfe0c907c457faf00afc5b8a96746af *man/adk.test.Rd
+f51008d7c2663b2dec01b667ec5bccb5 *man/print.adk.Rd

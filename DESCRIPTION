@@ -1,8 +1,8 @@
 Package: adk
 Type: Package
 Title: Anderson-Darling K-Sample Test and Combinations of Such Tests
-Version: 1.0-1
-Date: 2011-05-21
+Version: 1.0-2
+Date: 2011-06-
 Author: Fritz Scholz
 Maintainer: <fscholz@u.washington.edu>
 Description: The Anderson-Darling K-sample test can be used to test
@@ -20,6 +20,6 @@ Description: The Anderson-Darling K-sample test can be used to test
         or materials.
 License: GPL (>= 2)
 LazyLoad: yes
-Packaged: 2011-05-21 18:35:31 UTC; fritz
+Packaged: 2012-10-29 08:58:10 UTC; ripley
 Repository: CRAN
-Date/Publication: 2011-05-21 20:28:03
+Date/Publication: 2012-10-29 08:58:10

@@ -1,4 +1,8 @@
+		CHANGES in `adk' VERSION 1.0-2
 
+    o     removed another integer overflow potential in adk.test for 
+          very large data sets; spotted by Philip Garnett
+          	
 		CHANGES in `adk' VERSION 1.0-1
 
     o     removed an integer overflow potential in adk.test for 

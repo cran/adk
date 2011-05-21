@@ -1,12 +1,12 @@
-`print.adk` <-
-function (x, ...) 
+print.adk <-
+function (x,...) 
 {
 ######################################################
 #
 # This is a print function for objects of class adk,
 # as they are produced by adk.test and adk.combined.test.
 #
-# Fritz Scholz, January 2008
+# Fritz Scholz, May 2011
 #
 #######################################################
     if(names(x)[1]=="k"){# checking whether the object x came from adk.test
@@ -16,11 +16,11 @@ function (x, ...)
     cat(x$ns)
     cat(paste("\nTotal number of values:", x$n))
     cat(paste("\nNumber of unique values:", x$n-x$n.ties))
-    cat(paste("\n\nMean of Anderson Darling Criterion:", 
+    cat(paste("\n\nMean of Anderson-Darling Criterion:", 
         x$k-1))
-    cat(paste("\nStandard deviation of Anderson Darling Criterion:", 
+    cat(paste("\nStandard deviation of Anderson-Darling Criterion:", 
         x$sig))
-    cat("\n\nT = (Anderson Darling Criterion - mean)/sigma")
+    cat("\n\nT.AD = (Anderson-Darling Criterion - mean)/sigma")
     cat("\n\nNull Hypothesis: All samples come from a common population.\n\n")
     print(x$adk)
     if (x$warning) {

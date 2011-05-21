@@ -1,10 +1,10 @@
-`adk.pval` <-
+adk.pval <-
 function (tx,m) 
 {
-# This function "adk.pval" evaluates the p-value of the observed value tx of the T_m 
-# statistic in "K-Sample Anderson-Darling Tests" by F.W. Scholz and M.A. Stephens (1987),
-# Journal of the American Statistical Association", Vol 82, No. 399, pp 918-924.
-# Thus this p-value is P(T_m >= tx).
+# This function "adk.pval" evaluates the p-value of the observed value 
+# tx of the T_m statistic in "K-Sample Anderson-Darling Tests" by F.W. Scholz 
+# and M.A. Stephens (1987), Journal of the American Statistical Association, 
+# Vol 82, No. 399, pp 918-924. Thus this p-value is P(T_m >= tx).
 #
 # Input: tx = observed value of T_m, tx > 0.
 #         m = the index of T_m, m >= 1.
@@ -12,14 +12,15 @@ function (tx,m)
 # Output: a list with components
 #         p0 = p-value of tx, i.e., p0 = P(T_m >= tx)
 #         extrap = a logical indicator
-#                    extrap = T means that linear extrapolation took place
-#                    extrap = F means that quadratic interpolation was used.
+#                    extrap = TRUE means that linear extrapolation took place
+#                    extrap = FALSE means that quadratic interpolation was used.
 #
 # Computational Details:
 #
 # This function first interpolates the upper T_m quantiles as given in Table 1
-# of the above reference to the given value of m by fitting a quadratic in 1/sqrt(m)
-# to the quantiles as tabulated for the upper quantile levels .25, .10, .05, .025, .01.
+# of the above reference to the given value of m by fitting a quadratic 
+# in 1/sqrt(m) to the quantiles as tabulated for the upper quantile
+# levels .25, .10, .05, .025, .01.
 #
 # Next a quadratic in the interpolated quantiles (for m) is fitted to the  
 # log-odds of the upper probability levels defining these quantiles
@@ -27,7 +28,7 @@ function (tx,m)
 # probability value, i.e., the p-value. p-values outside the tabulated range
 # [.01,.25] are obtained by linear extrapolation of the fitted quadratic.
 #  
-# Fritz Scholz Jan. 2008
+# Fritz Scholz, May 2011
 #=========================================================================================
 table1.adk <- cbind(c(1, 2, 3, 4, 6, 8, 10, Inf), c(0.326, 
         0.449, 0.498, 0.525, 0.557, 0.576, 0.59, 0.674), c(1.225, 
@@ -35,7 +36,7 @@ table1.adk <- cbind(c(1, 2, 3, 4, 6, 8, 10, Inf), c(0.326,
         1.945, 1.915, 1.894, 1.859, 1.839, 1.823, 1.645), c(2.719, 
         2.576, 2.493, 2.438, 2.365, 2.318, 2.284, 1.96), c(3.752, 
         3.414, 3.246, 3.139, 3.005, 2.92, 2.862, 2.326))
-    extrap <- F
+    extrap <- FALSE
     mt <- table1.adk[, 1]
     sqm1 <- 1/sqrt(mt)
     sqm2 <- sqm1^2
@@ -55,12 +56,12 @@ table1.adk <- cbind(c(1, 2, 3, 4, 6, 8, 10, Inf), c(0.326,
         lp0 <- coef[1] + coef[2] * tx + coef[3] * tx^2
     }
     if (tx > max(tm)) {
-        extrap <- T
+        extrap <- TRUE
         lp0 <- min(lp) + (tx - max(tm)) * (coef[2] + 2 * coef[3] * 
             max(tm))
     }
     if (tx < min(tm)) {
-        extrap <- T
+        extrap <- TRUE
         lp0 <- max(lp) + (tx - min(tm)) * (coef[2] + 2 * coef[3] * 
             min(tm))
     }
@@ -68,3 +69,4 @@ table1.adk <- cbind(c(1, 2, 3, 4, 6, 8, 10, Inf), c(0.326,
     names(p0) <- NULL
     list(p0 = p0, extrap = extrap)
 }
+

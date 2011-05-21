@@ -1,0 +1,13 @@
+
+		CHANGES in `adk' VERSION 1.0-1
+
+    o     removed an integer overflow potential in adk.test for 
+          large data sets; spotted by Clinton Chee 
+          <Clinton.Chee@cba.com.au>.  Some additional cleanup was performed.
+
+    o     The code was changed to remove any NA's, if they are present.
+          A warning is issued with the total NA count.
+
+
+
+

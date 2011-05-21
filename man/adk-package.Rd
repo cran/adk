@@ -1,37 +1,32 @@
 \name{adk-package}
 \alias{adk-package}
-%\alias{adk}
 \docType{package}
 \title{
 The Package adk Contains a K-Sample Anderson-Darling Test and its Combinations
 }
 \description{
-The K-sample Anderson-Darling test \code{adk.test} is used to test the hypothesis that K samples
-of various sizes come from a common continuous distribution that is otherwise unspecified.
-It is a rank test and it is consistent against all alternatives. The combined version
-of the test \code{adk.combined.test} is used to test several such hypotheses at the same time
-and the common distribution may vary from hypothesis to hypothesis. 
+The K-sample Anderson-Darling test \code{adk.test} is used to test the hypothesis that K samples of various sizes come from a common continuous distribution that is otherwise unspecified. It is a rank test and it is consistent against all alternatives. The combined version of the test 
+\code{adk.combined.test} is used to test several such hypotheses at the same time and the common distribution may vary from hypothesis to hypothesis.
 }
 \details{
 \tabular{ll}{
 Package: \tab adk\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2008-01-21\cr
+Version: \tab 1.0-1\cr
+Date: \tab 2011-05-21\cr
 License: \tab GPL version 2 or newer\cr
+LazyLoad: \tab yes\cr
 }
-
 }
 \author{
 Fritz Scholz
 
-Maintainer:  <fscholz@u.washington.edu>
+Maintainer: \email{fscholz@uw.edu}
 }
-\references{ Scholz F.W. and Stephens M.A. (1987), K-sample Anderson-Darling Tests,
-\emph{Journal of the American Statistical Association,} \bold{Vol 82, No. 399},  918--924. }
-\keyword{ package }
-\keyword{ htest }
-\keyword{ nonparametric }
+\references{
+Scholz, F. W. and Stephens, M. A. (1987), K-sample Anderson-Darling Tests, \emph{Journal of the American Statistical Association}, 
+\bold{Vol 82, No. 399}, 918--924. 
+}
 
 \examples{
 ## Example using adk.test
